@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #3b82f6;
+            color: white;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+
+        .note {
+            background: #1e293b;
+            padding: 10px;
+            margin: 10px auto;
+            width: 300px;
+            border-radius: 8px;
+        }
+
+        .note button {
+            margin-left: 10px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Notes App</h1>
+
+    <textarea placeholder="Type your note..." id="text"></textarea><br>
+    <button id="submit">Save Note</button>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
