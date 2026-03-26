@@ -1,0 +1,141 @@
+# ✅ Core JavaScript
+
+Q1. What are primitive data types in JavaScript?
+A. String, Number, Boolean, Null, Undefined, BigInt, and Symbol. These are immutable and passed by value.
+
+---
+
+Q2. Difference between var, let, and const?
+A. var is function-scoped and can be redeclared. let and const are block-scoped. let can be updated but not redeclared, while const cannot be reassigned.
+
+---
+
+Q3. Difference between == and ===?
+A. == checks value with type coercion, while === checks both value and type (strict equality).
+
+---
+
+Q4. What is a function?
+A. A reusable block of code that executes when called and performs a specific task.
+
+---
+
+Q5. What is a closure?
+A. A function that remembers variables from its outer scope even after the outer function has finished execution.
+
+---
+
+# ✅ DOM
+
+Q6. What is DOM?
+A. DOM (Document Object Model) is a tree structure created by the browser that represents HTML elements and allows JavaScript to manipulate them.
+
+---
+
+Q7. Difference between innerHTML and textContent?
+A. innerHTML parses HTML content, while textContent only handles plain text and is safer.
+
+---
+
+Q8. What does appendChild() do?
+A. It adds a new element as the last child of a parent element.
+
+---
+
+Q9. What is event handling?
+A. It is the process of responding to user actions like clicks, typing, or submitting forms.
+
+---
+
+Q10. What is event delegation?
+A. It is a technique where a single event listener is added to a parent element to handle events for its child elements using event bubbling.
+
+---
+
+Q11. What is event bubbling and capturing?
+A. Bubbling is when an event moves from child to parent. Capturing is when an event moves from parent to child. By default, JavaScript uses bubbling.
+
+---
+
+Async JavaScript
+
+Q12. What is fetch()?
+A. It is used to make API calls and retrieve data from a server.
+
+---
+
+Q13. What is a Promise?
+A. A Promise represents a future value and has three states: pending, fulfilled, and rejected.
+
+---
+
+Q14. What is async/await?
+A. async makes a function return a promise, and await pauses execution until the promise resolves.
+
+---
+
+# ✅ Storage
+
+Q15. What is localStorage?
+A. It is a browser storage that stores data as key-value pairs and persists even after page reload or browser close.
+
+---
+
+Q16. Difference between localStorage and sessionStorage?
+A. localStorage persists data even after browser close, while sessionStorage clears data when the tab is closed.
+
+---
+
+Q17. Difference between localStorage and cookies?
+A. localStorage stores larger data and is not sent to the server. Cookies are smaller and are sent with every HTTP request, mainly used for authentication.
+
+---
+
+# ✅ Project-Based Questions
+
+Q18. Explain your Notes App.
+A. I built a notes app where users can add, edit, and delete notes. Data is stored in localStorage. I used an array of objects with id and note, and dynamically rendered the UI using DOM manipulation.
+
+---
+
+Q19. How did you implement delete?
+A. I used filter to remove the note by id, updated the list, saved it to localStorage, and re-rendered the UI.
+
+---
+
+Q20. How did you implement edit?
+A. I used an editingId variable. On clicking edit, I filled the textarea with the old note. On save, I checked if editingId exists and updated the note using map.
+
+---
+
+Q21. Why use id instead of index?
+A. Index changes after deletion, but id remains unique and stable, making it reliable for updates and deletes.
+
+---
+
+Q22. Why re-render the whole UI?
+A. For small datasets, re-rendering simplifies logic and avoids complex DOM updates. For larger apps, we can optimize using partial updates or frameworks like React.
+
+---
+
+Q23. Why use localStorage instead of a database?
+A. Since this is a small client-side project, localStorage is simple and sufficient. For larger applications, I would use a backend database like MongoDB.
+
+---
+
+Q24. What if data increases a lot?
+A. My current approach is O(n), which works for small data. For large data, I can optimize using better data structures like Map, partial DOM updates, or use frameworks like React with virtual DOM.
+
+---
+
+# ✅ Advanced
+
+Q25. What is state?
+A. State is data that controls the UI. In my app, list and editingId act as state.
+
+---
+
+Q26. What is time complexity of delete operation?
+A. Using filter, it is O(n) because we iterate through the entire list.
+
+---
